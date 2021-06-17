@@ -1,0 +1,5 @@
+.DS_Store
+gui-app/do_nothing_gui.dSYM
+terminal-app/do_nothing.dSYM
+terminal-app/do_nothing
+gui-app/do_nothing_gui
