@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-26 09:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: do_nothing.c:24
+#, c-format
+msgid ""
+"[1;37mThis application does absolutely nothing.\n"
+"\n"
+msgstr ""
+
+#: do_nothing.c:25
+#, c-format
+msgid "Available options:\n"
+msgstr ""
+
+#: do_nothing.c:26
+#, c-format
+msgid "-i <file>\tDoes nothing with specified file. \n"
+msgstr ""
+
+#: do_nothing.c:27
+#, c-format
+msgid ""
+"-g <file>\tDoes nothing with specified file, but in [0;32mgreen "
+"color[0;37m.\n"
+msgstr ""
+
+#: do_nothing.c:39 do_nothing.c:45
+#, c-format
+msgid "Use -h to display help.\n"
+msgstr ""
+
+#: do_nothing.c:49
+#, c-format
+msgid "You must specify a destination file name.\n"
+msgstr ""
+
+#: do_nothing.c:54
+#, c-format
+msgid "Doing nothing with %s file...\n"
+msgstr ""
+
+#: do_nothing.c:55 do_nothing.c:60
+#, c-format
+msgid "Done.\n"
+msgstr ""
+
+#: do_nothing.c:59
+#, c-format
+msgid "[0;32mDoing nothing with %s file...\n"
+msgstr ""
