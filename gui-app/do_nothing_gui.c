@@ -1,4 +1,6 @@
 #include <gtk/gtk.h>
+#include <glib/gi18n.h>
+#include <locale.h>
 
 typedef struct {
     int green;
@@ -13,15 +15,20 @@ void update_green_option(GtkWidget *widget, gpointer ptr);
 int main(int argc, char *argv[]) {
     gtk_init (&argc, &argv);
 
+    // setlocale (LC_ALL, "");
+    bindtextdomain ("base", "./locales/");
+    bind_textdomain_codeset ("base", "UTF-8");
+    textdomain ("base");
+
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     GtkWidget *main_table = gtk_table_new(2, 2, TRUE);
 
-    GtkWidget *select_file_button = gtk_file_chooser_button_new("Select file", GTK_FILE_CHOOSER_ACTION_OPEN);
-    GtkWidget *do_nothing_button = gtk_button_new_with_label ("Do nothing.");
+    GtkWidget *select_file_button = gtk_file_chooser_button_new(_("Select file"), GTK_FILE_CHOOSER_ACTION_OPEN);
+    GtkWidget *do_nothing_button = gtk_button_new_with_label (_("Do nothing."));
     gtk_widget_set_sensitive (do_nothing_button, FALSE);
-    GtkWidget *green_checkbox = gtk_check_button_new_with_label("green");
+    GtkWidget *green_checkbox = gtk_check_button_new_with_label(_("green"));
     
-    gtk_window_set_title(GTK_WINDOW(window), "Do Nothing");
+    gtk_window_set_title(GTK_WINDOW(window), _("Do Nothing"));
     gtk_window_set_resizable(GTK_WINDOW(window), TRUE);
     gtk_window_set_default_size(GTK_WINDOW(window), 400, 75);
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
@@ -54,15 +61,15 @@ static void file_selected(GtkFileChooserButton *btn, gpointer ptr) {
 }
 
 void open_dialog(GtkWidget *widget, gpointer ptr) {
-    GtkWidget *dialog = gtk_dialog_new_with_buttons("", GTK_WINDOW(((dialog_arguments *)ptr)->window), GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, "Cancel", 0, "OK", 1, NULL);
+    GtkWidget *dialog = gtk_dialog_new_with_buttons("", GTK_WINDOW(((dialog_arguments *)ptr)->window), GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, _("Cancel"), 0, _("OK"), 1, NULL);
 
-    GtkWidget *label = gtk_label_new ("Doing nothing.");
+    GtkWidget *label = gtk_label_new (_("Doing nothing."));
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), label);
 
     printf("%d",1);
 
     if (((dialog_arguments *)ptr)->green) {
-        gtk_label_set_markup (GTK_LABEL (label), "<span foreground='#27ae60'>Doing nothing in green.</span>");
+        gtk_label_set_markup (GTK_LABEL (label), _("<span foreground='#27ae60'>Doing nothing in green.</span>"));
     }
     gtk_widget_show (label);
 

@@ -1,0 +1,51 @@
+# Polish translations for PACKAGE package.
+# Copyright (C) 2021 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Rafał Rybnik <rafal@yaakov.local>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-27 09:15+0200\n"
+"PO-Revision-Date: 2021-06-27 09:15+0200\n"
+"Last-Translator: Rafa Rybnik <rafal@yaakov.local>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: do_nothing_gui.c:26
+msgid "Select file"
+msgstr "Wybierz plik"
+
+#: do_nothing_gui.c:27
+msgid "Do nothing."
+msgstr "Nic nie rób."
+
+#: do_nothing_gui.c:29
+msgid "green"
+msgstr "na zielono"
+
+#: do_nothing_gui.c:31
+msgid "Do Nothing"
+msgstr "Do Nothing"
+
+#: do_nothing_gui.c:64
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: do_nothing_gui.c:64
+msgid "OK"
+msgstr "OK"
+
+#: do_nothing_gui.c:66
+msgid "Doing nothing."
+msgstr "Nie robię nic."
+
+#: do_nothing_gui.c:72
+msgid "<span foreground='#27ae60'>Doing nothing in green.</span>"
+msgstr "<span foreground='#27ae60'>Nie robię nic, ale na zielono.</span>"
